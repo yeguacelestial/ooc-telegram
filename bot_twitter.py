@@ -25,7 +25,7 @@ conexion = sqlite3.connect(base)
 cursor = conexion.cursor()
 
 # Fetch msgs from db
-while 1:
+def fetch():
     os.system("python bot_wrapper.py")
     cursor.execute("SELECT (mensaje) FROM msgs")
     mensajes = cursor.fetchall()
@@ -80,3 +80,6 @@ while 1:
 
     else:
         tweet = random.choice(mensajes_lista)
+
+if __name__ == '__main__':
+    fetch()
