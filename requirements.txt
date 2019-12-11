@@ -1,5 +1,4 @@
 tweepy
-random
 sqlite3
 python-dotenv
 python-telegram-bot
