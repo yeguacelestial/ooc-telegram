@@ -3,5 +3,3 @@ random
 sqlite3
 python-dotenv
 python-telegram-bot
-logging
-time
