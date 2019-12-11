@@ -26,6 +26,7 @@ cursor = conexion.cursor()
 
 # Fetch msgs from db
 while 1:
+    os.system("python bot_wrapper.py")
     cursor.execute("SELECT (mensaje) FROM msgs")
     mensajes = cursor.fetchall()
     mensajes_lista = []
@@ -49,6 +50,13 @@ while 1:
     tweet = random.choice(mensajes_lista)
 
     if (tweet != (last_tweet)) and (tweet not in tweets):
+        tweet = tweet.replace("feminicidio", "perfectirijillo")
+        tweet = tweet.replace("feminista", "unicornio")
+        tweet = tweet.replace("violar", "extrañar")
+        tweet = tweet.replace("violaste", "extrañaste")
+        tweet = tweet.replace("violando", "rompiendo")
+        tweet = tweet.replace("gorda", "hermosa")
+        tweet = tweet.replace("cogiste", "conquistaste")
         tweet = tweet.replace("hombrecelestial", "yeguacelestial")
         tweet = tweet.replace("ComandoBurrito", "COMANDO_BURRITO")
         tweet = tweet.replace("VirgateGrunt", "FELG_STAR_")

@@ -39,14 +39,15 @@ def main():
         update_id = None
 
     logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    return bot
 
-    while True:
+    """while True:
         try:
             echo(bot)
         except NetworkError:
             sleep(1)
         except Unauthorized:
-            update_id += 1
+            update_id += 1"""
 
 def echo(bot):
     #Echo the message the user sent
@@ -69,4 +70,4 @@ def echo(bot):
                 #update.message.reply_text(tweet)
 
 if __name__ == '__main__':
-    main()
+    echo(main())
